@@ -33,6 +33,6 @@ jobs:
     - name: Build with Maven
       run: |
         echo Knit and Crochet Pattern Storage Application
-        cd "code/JavaFX Sample/"
+        cd "code/JavaFX Sample/JavaFX Sample/"
         mvn --batch-mode --update-snapshots clean verify
         cd ../..
