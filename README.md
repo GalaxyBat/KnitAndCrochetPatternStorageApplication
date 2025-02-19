@@ -1,9 +1,10 @@
 # KnitAndCrochetPatternStorageApplication
+
 Stores knitting and crochet patterns in a single application
 
 
 ## dev setup
-TODO
+Runs on Visual Studio Code
 
 
 ## test setup

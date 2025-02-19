@@ -1,0 +1,1 @@
+The application will assist fiber artists in tracking and managing their electronic patterns.
