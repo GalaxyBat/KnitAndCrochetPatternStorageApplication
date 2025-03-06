@@ -94,6 +94,16 @@ package main.java.edu.westga.comp4420.javafx_sample.model;
       * @param patternName
       */
      public void setPatternName(String patternName) {
+        if (patternName == null) {
+            throw new IllegalArgumentException("Pattern can not be null");
+        }
+        if (patternName.isEmpty()) {
+            throw new IllegalArgumentException("Pattern can not be empty");
+        }
+        if (patternName.isBlank()) {
+            throw new IllegalArgumentException("Pattern can not be blank");
+        }
+
         this.patternName = patternName;
      }
 
@@ -115,6 +125,16 @@ package main.java.edu.westga.comp4420.javafx_sample.model;
       * @param author
       */
      public void setAuthor(String author) {
+        if (author == null) {
+            throw new IllegalArgumentException("Author can not be null");
+        }
+        if (author.isEmpty()) {
+            throw new IllegalArgumentException("Author can not be empty");
+        }
+        if (author.isBlank()) {
+            throw new IllegalArgumentException("Author can not be blank");
+        }
+
         this.author = author;
      }
 
@@ -136,6 +156,16 @@ package main.java.edu.westga.comp4420.javafx_sample.model;
       * @param website
       */
      public void setWebsite(String website) {
+        if (website == null) {
+            throw new IllegalArgumentException("Website can not be null");
+        }
+        if (website.isEmpty()) {
+            throw new IllegalArgumentException("Website can not be empty");
+        }
+        if (website.isBlank()) {
+            throw new IllegalArgumentException("Website can not be blank");
+        }
+
         this.website = website;
      }
 
@@ -199,6 +229,10 @@ package main.java.edu.westga.comp4420.javafx_sample.model;
       * @param yarnWeight
       */
      public void setYarnWeight(int yarnWeight) {
+        if (yarnWeight <= 0 || yarnWeight >=5) {
+            throw new IllegalArgumentException("Yarn weight must be in 1, 2, 3, or 4");
+        }
+        
         this.yarnWeight = yarnWeight;
      }
 
