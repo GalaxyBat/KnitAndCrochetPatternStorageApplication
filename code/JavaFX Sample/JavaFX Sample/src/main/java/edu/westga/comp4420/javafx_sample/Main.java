@@ -17,6 +17,7 @@ import javafx.scene.Scene;
 public class Main extends Application {
 	public static final String WINDOW_TITLE = "Knit and Crochet Pattern Storage Application";
 	public static final String GUI_RESOURCE = "view/codebehind/MainWindow.fxml";
+	public static final String ADD_PATTERN_RESOURCE = "view/codebehind/AddPatternWindow.fxml";
 
 	/**
 	 * JavaFX entry point.

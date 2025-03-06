@@ -50,6 +50,15 @@ public class PatternStorage {
         this.patterns = patterns;
     }
 
+    /**
+     * Checks to see if the list already has the pattern
+     * 
+     * @precondition pattern != null
+     * @postconditino none
+     * 
+     * @param pattern the pattern
+     * @return true if the list contains the pattern
+     */
     public boolean contains(Pattern pattern) {
         if (pattern == null) {
             throw new IllegalArgumentException(PATTERN_NULL);
@@ -64,6 +73,16 @@ public class PatternStorage {
         return false;
     }
 
+    /**
+     * Adds pattern if not a duplicate
+     * 
+     * @precondition pattern != null && !this.contains(pattern) 
+     * @postcondition none
+     * 
+     * @param pattern the pattern
+     * 
+     * @return true if pattern is successfully added
+     */
     public boolean add(Pattern pattern) {
         if (pattern == null) {
             throw new IllegalArgumentException(PATTERN_NULL);
@@ -75,6 +94,15 @@ public class PatternStorage {
         return this.patterns.add(pattern);
     }
 
+    /**
+     * Removes the pattern from the list
+     * 
+     * @precondition pattern != null
+     * @postcondition none
+     * 
+     * @param pattern the pattern
+     * @return true when removed
+     */
     public boolean remove(Pattern pattern) {
         if (pattern == null) {
             throw new IllegalArgumentException(PATTERN_NULL);
