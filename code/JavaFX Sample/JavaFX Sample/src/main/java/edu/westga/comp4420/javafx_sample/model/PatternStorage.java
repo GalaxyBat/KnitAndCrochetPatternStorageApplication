@@ -1,5 +1,7 @@
 package main.java.edu.westga.comp4420.javafx_sample.model;
 
+import java.util.ArrayList;
+
 /**
  * The Class PatternStorage
  * 
@@ -7,7 +9,10 @@ package main.java.edu.westga.comp4420.javafx_sample.model;
  * @author Genesis Ross
  */
 
- public class PatternStorage {
+public class PatternStorage {
+    private static final String PATTERNS_DUPLICATE = "Patterns can't be duplicate";
+    private static final String PATTERNS_NULL = "Patterns can't be null";
+    private static final String PATTERN_NULL = "Pattern can't be null";
     private ArrayList<Pattern> patterns;
 
     /**
@@ -40,14 +45,14 @@ package main.java.edu.westga.comp4420.javafx_sample.model;
      */
     public void setPatterns(ArrayList<Pattern> patterns) {
         if (patterns == null) {
-            throw new IllegalAccessException("Patterns can't be null");
+            throw new IllegalAccessException(PATTERNS_NULL);
         }
         this.patterns = patterns;
     }
 
     public boolean contains(Pattern pattern) {
         if (pattern == null) {
-            throw new IllegalArgumentException("Pattern can't be null");
+            throw new IllegalArgumentException(PATTERN_NULL);
         }
 
         for (Pattern currPattern: this.patterns) {
@@ -61,10 +66,10 @@ package main.java.edu.westga.comp4420.javafx_sample.model;
 
     public boolean add(Pattern pattern) {
         if (pattern == null) {
-            throw new IllegalArgumentException("Pattern can't be null");
+            throw new IllegalArgumentException(PATTERN_NULL);
         }
         if (this.contains(pattern)) { 
-            throw new IllegalArgumentException("Patterns can't be duplicate");
+            throw new IllegalArgumentException(PATTERNS_DUPLICATE);
         }
            
         return this.patterns.add(pattern);
@@ -72,11 +77,11 @@ package main.java.edu.westga.comp4420.javafx_sample.model;
 
     public boolean remove(Pattern pattern) {
         if (pattern == null) {
-            throw new IllegalArgumentException("Pattern can't be null");
+            throw new IllegalArgumentException(PATTERN_NULL);
         }
         return this.patterns.remove(pattern);
     }
 
 
 
- }
+}

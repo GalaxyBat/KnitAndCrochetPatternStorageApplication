@@ -7,6 +7,6 @@ package main.java.edu.westga.comp4420.javafx_sample.model;
  * @author Genesis Ross
  */
 
- public enum Progression {
+public enum Progression {
     Incomplete, InProgress, Complete;
- }
+}
