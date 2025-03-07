@@ -1,21 +1,21 @@
 package edu.westga.comp4420.javafx_sample.view.codebehind;
 
-import javafx.event.ActionEvent;
+// import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.stage.Modality;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.ListView;
+// import javafx.fxml.FXMLLoader;
+// import javafx.scene.Parent;
+// import javafx.scene.Scene;
+// import javafx.stage.Stage;
+// import javafx.stage.Modality;
+// import javafx.scene.control.Alert;
+// import javafx.scene.control.Alert.AlertType;
+// import javafx.scene.control.ListView;
 
-import java.io.IOException;
+// import java.io.IOException;
 
-import main.java.edu.westga.comp4420.javafx_sample.model.Pattern;
-import edu.westga.comp4420.javafx_sample.Main;
+// import main.java.edu.westga.comp4420.javafx_sample.model.Pattern;
+// import edu.westga.comp4420.javafx_sample.Main;
 
 
 /**
@@ -39,7 +39,7 @@ public class MainWindow {
 
     @FXML
     void newPatternBTN(ActionEvent event) {
-        try {
+        // try {
 		// 	FXMLLoader loader = new FXMLLoader();
 		// 	loader.setLocation(Main.class.getResource(Main.ADD_PATTERN_WINDOW_RESOURCE));
 		// 	loader.load();
