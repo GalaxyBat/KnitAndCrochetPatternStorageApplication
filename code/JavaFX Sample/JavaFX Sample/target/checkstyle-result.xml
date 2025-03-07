@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="C:\Users\genes\OneDrive\Desktop\GenesisRoss_Lab3_COMP4420\KnitAndCrochetPatternStorageApplication\code\JavaFX Sample\JavaFX Sample\src\main\java\edu\westga\comp4420\javafx_sample\Main.java">
+</file>
+<file name="C:\Users\genes\OneDrive\Desktop\GenesisRoss_Lab3_COMP4420\KnitAndCrochetPatternStorageApplication\code\JavaFX Sample\JavaFX Sample\src\main\java\edu\westga\comp4420\javafx_sample\model\Craft.java">
+</file>
+<file name="C:\Users\genes\OneDrive\Desktop\GenesisRoss_Lab3_COMP4420\KnitAndCrochetPatternStorageApplication\code\JavaFX Sample\JavaFX Sample\src\main\java\edu\westga\comp4420\javafx_sample\model\Pattern.java">
+</file>
+<file name="C:\Users\genes\OneDrive\Desktop\GenesisRoss_Lab3_COMP4420\KnitAndCrochetPatternStorageApplication\code\JavaFX Sample\JavaFX Sample\src\main\java\edu\westga\comp4420\javafx_sample\model\PatternStorage.java">
+</file>
+<file name="C:\Users\genes\OneDrive\Desktop\GenesisRoss_Lab3_COMP4420\KnitAndCrochetPatternStorageApplication\code\JavaFX Sample\JavaFX Sample\src\main\java\edu\westga\comp4420\javafx_sample\model\Progression.java">
+</file>
+<file name="C:\Users\genes\OneDrive\Desktop\GenesisRoss_Lab3_COMP4420\KnitAndCrochetPatternStorageApplication\code\JavaFX Sample\JavaFX Sample\src\main\java\edu\westga\comp4420\javafx_sample\test\TestPatternConstructor.java">
+</file>
+<file name="C:\Users\genes\OneDrive\Desktop\GenesisRoss_Lab3_COMP4420\KnitAndCrochetPatternStorageApplication\code\JavaFX Sample\JavaFX Sample\src\main\java\edu\westga\comp4420\javafx_sample\view\codebehind\AddPatternWindow.java">
+</file>
+<file name="C:\Users\genes\OneDrive\Desktop\GenesisRoss_Lab3_COMP4420\KnitAndCrochetPatternStorageApplication\code\JavaFX Sample\JavaFX Sample\src\main\java\edu\westga\comp4420\javafx_sample\view\codebehind\MainWindow.java">
+<error line="8" column="8" severity="error" message="Unused import - javafx.scene.Scene." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="9" column="8" severity="error" message="Unused import - javafx.stage.Stage." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="18" column="8" severity="error" message="Unused import - edu.westga.comp4420.javafx_sample.Main." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+</checkstyle>
