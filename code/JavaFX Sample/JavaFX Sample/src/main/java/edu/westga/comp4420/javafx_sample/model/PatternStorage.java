@@ -65,7 +65,7 @@ public class PatternStorage {
         }
 
         for (Pattern currPattern: this.patterns) {
-            if (currPattern.getPatternName.equals(pattern.getPatternName)) {
+            if (currPattern.getPatternName.equals(pattern.getPatternName) && currPattern.getAuthor().equals(pattern.getAuthor())) {
                 return true;
             }
         }
@@ -108,6 +108,15 @@ public class PatternStorage {
             throw new IllegalArgumentException(PATTERN_NULL);
         }
         return this.patterns.remove(pattern);
+    }
+
+    /**
+     * Gets the size of the storage
+     * 
+     * @return how many patterns are in the list
+     */
+    public int size() {
+        return this.patterns.size();
     }
 
 
