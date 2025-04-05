@@ -1,3 +1,7 @@
-main\java\edu\westga\comp4420\javafx_sample\model\Craft.class
-main\java\edu\westga\comp4420\javafx_sample\model\Progression.class
-main\java\edu\westga\comp4420\javafx_sample\model\Pattern.class
+edu\westga\comp4420\javafx_sample\model\PatternStorage.class
+edu\westga\comp4420\javafx_sample\model\Pattern.class
+edu\westga\comp4420\javafx_sample\model\Progression.class
+edu\westga\comp4420\javafx_sample\view\codebehind\AddPatternWindow.class
+edu\westga\comp4420\javafx_sample\Main.class
+edu\westga\comp4420\javafx_sample\view\codebehind\MainWindow.class
+edu\westga\comp4420\javafx_sample\model\Craft.class

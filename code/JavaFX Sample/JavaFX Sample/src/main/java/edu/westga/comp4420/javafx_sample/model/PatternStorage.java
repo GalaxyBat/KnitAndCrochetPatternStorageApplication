@@ -1,4 +1,4 @@
-package main.java.edu.westga.comp4420.javafx_sample.model;
+package edu.westga.comp4420.javafx_sample.model;
 
 import java.util.ArrayList;
 
@@ -45,7 +45,7 @@ public class PatternStorage {
      */
     public void setPatterns(ArrayList<Pattern> patterns) {
         if (patterns == null) {
-            throw new IllegalAccessException(PATTERNS_NULL);
+            throw new IllegalArgumentException(PATTERNS_NULL);
         }
         this.patterns = patterns;
     }
@@ -65,7 +65,7 @@ public class PatternStorage {
         }
 
         for (Pattern currPattern: this.patterns) {
-            if (currPattern.getPatternName.equals(pattern.getPatternName) && currPattern.getAuthor().equals(pattern.getAuthor())) {
+            if (currPattern.getPatternName().equals(pattern.getPatternName()) && currPattern.getAuthor().equals(pattern.getAuthor())) {
                 return true;
             }
         }

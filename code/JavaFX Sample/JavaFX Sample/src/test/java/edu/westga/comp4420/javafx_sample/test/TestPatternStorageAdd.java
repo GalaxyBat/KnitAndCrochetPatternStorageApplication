@@ -1,13 +1,12 @@
-package main.java.edu.westga.comp4420.javafx_sample.test;
+package edu.westga.comp4420.javafx_sample.test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.beans.Transient;
 
 import org.junit.jupiter.api.Test;
-import main.java.edu.westga.comp4420.javafx_sample.model.Craft;
-import main.java.edu.westga.comp4420.javafx_sample.model.Pattern;
-import main.java.edu.westga.comp4420.javafx_sample.model.PatternStorage;
-import main.java.edu.westga.comp4420.javafx_sample.model.Progression;
+import edu.westga.comp4420.javafx_sample.model.Craft;
+import edu.westga.comp4420.javafx_sample.model.Pattern;
+import edu.westga.comp4420.javafx_sample.model.PatternStorage;
+import edu.westga.comp4420.javafx_sample.model.Progression;
 
 /**
  * The Test Class for the Pattern Storage add method
@@ -68,10 +67,10 @@ class TestPatternStorageAdd {
         storage.add(pattern2);
         storage.add(pattern3);
         assertAll(
-            () -> assertSame(pattern, storage.getPatterns.get(0)),
-            () -> assertSame(pattern2, storage.getPatterns.get(1)),
-            () -> assertSame(pattern3, storage.getPatterns.get(2)),
-            () -> assertEquals(3, storage.size());
+            () -> assertSame(pattern, storage.getPatterns().get(0)),
+            () -> assertSame(pattern2, storage.getPatterns().get(1)),
+            () -> assertSame(pattern3, storage.getPatterns().get(2)),
+            () -> assertEquals(3, storage.size())
         );
     }
  }

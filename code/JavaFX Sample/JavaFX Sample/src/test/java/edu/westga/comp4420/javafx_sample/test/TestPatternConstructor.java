@@ -1,11 +1,10 @@
-package main.java.edu.westga.comp4420.javafx_sample.test;
+package edu.westga.comp4420.javafx_sample.test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
 import org.junit.jupiter.api.Test;
-import main.java.edu.westga.comp4420.javafx_sample.model.Craft;
-import main.java.edu.westga.comp4420.javafx_sample.model.Pattern;
-import main.java.edu.westga.comp4420.javafx_sample.model.Progression;
+import edu.westga.comp4420.javafx_sample.model.Craft;
+import edu.westga.comp4420.javafx_sample.model.Pattern;
+import edu.westga.comp4420.javafx_sample.model.Progression;
 
 /**
  * The Test Class for the Pattern Constructor
