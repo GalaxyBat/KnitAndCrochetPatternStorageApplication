@@ -37,6 +37,51 @@ public class MainWindow {
 
     }
 
+	@FXML
+    void handleFilterCrochet(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleFilterKnit(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlefilterWeightFive(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlefilterWeightFour(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlefilterWeightOne(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlefilterWeightSix(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlefilterWeightThree(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlefilterWeightTwo(ActionEvent event) {
+
+    }
+
+	@FXML
+    void showPatternInfoBTN(ActionEvent event) {
+
+    }
+
     @FXML
     void newPatternBTN(ActionEvent event) {
         try {
@@ -59,6 +104,11 @@ public class MainWindow {
 			errorBox.setContentText("Unable to open add window" + "\n" + error.getMessage());
 			errorBox.showAndWait();
 		}
+
+    }
+
+	@FXML
+    void updatePatternBTN(ActionEvent event) {
 
     }
 

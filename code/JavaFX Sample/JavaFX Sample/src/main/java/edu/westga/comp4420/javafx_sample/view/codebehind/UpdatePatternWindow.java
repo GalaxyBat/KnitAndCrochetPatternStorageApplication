@@ -2,21 +2,19 @@ package edu.westga.comp4420.javafx_sample.view.codebehind;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-import java.util.List;
-
-import edu.westga.comp4420.javafx_sample.model.Pattern;
+import javafx.scene.layout.AnchorPane;
 
 /**
- * CodeBehind To Handle Processing for the AddPatternWindow
+ * CodeBehind To Handle Processing for the UpdatePatternWindow
  *
  * @version Spring 2025
  * @author Genesis Ross
  */
-public class AddPatternWindow {   
+public class UpdatePatternWindow {
+
     @FXML
     private TextField authorTB;
 
@@ -47,18 +45,10 @@ public class AddPatternWindow {
     @FXML
     private ComboBox<Integer> yarnWeightCB;
 
-    //private List<Pattern> patterns;
-
     @FXML
-    void onAddPatternBTN(ActionEvent event) {
+    void onCloseBTN(ActionEvent event) {
 
     }
-
-    @FXML
-    void onCloseWindowBTN(ActionEvent event) {
-
-    }
-
 
     @FXML
     void onCompleteRB(ActionEvent event) {
@@ -85,10 +75,12 @@ public class AddPatternWindow {
 
     }
 
-    public void setItemList(List<Pattern> patterns) {
-        //this.patterns = patterns;
+    @FXML
+    void onUpdateBTN(ActionEvent event) {
+
     }
 
+    
     @FXML
     void initialize() {
         assert this.authorTB != null : "fx:id=\"authorTB\" was not injected: check your FXML file 'AddPatternWindow.fxml'.";
