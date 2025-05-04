@@ -48,32 +48,32 @@ public class MainWindow {
     }
 
     @FXML
-    void handlefilterWeightFive(ActionEvent event) {
+    void handleFilterWeightFive(ActionEvent event) {
 
     }
 
     @FXML
-    void handlefilterWeightFour(ActionEvent event) {
+    void handleFilterWeightFour(ActionEvent event) {
 
     }
 
     @FXML
-    void handlefilterWeightOne(ActionEvent event) {
+    void handleFilterWeightOne(ActionEvent event) {
 
     }
 
     @FXML
-    void handlefilterWeightSix(ActionEvent event) {
+    void handleFilterWeightSix(ActionEvent event) {
 
     }
 
     @FXML
-    void handlefilterWeightThree(ActionEvent event) {
+    void handleFilterWeightThree(ActionEvent event) {
 
     }
 
     @FXML
-    void handlefilterWeightTwo(ActionEvent event) {
+    void handleFilterWeightTwo(ActionEvent event) {
 
     }
 

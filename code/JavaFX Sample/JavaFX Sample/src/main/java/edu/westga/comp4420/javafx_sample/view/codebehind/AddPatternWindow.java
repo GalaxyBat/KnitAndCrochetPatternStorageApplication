@@ -3,6 +3,7 @@ package edu.westga.comp4420.javafx_sample.view.codebehind;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
+//import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -17,6 +18,8 @@ import edu.westga.comp4420.javafx_sample.model.Pattern;
  * @author Genesis Ross
  */
 public class AddPatternWindow {   
+
+
     @FXML
     private TextField authorTB;
 
