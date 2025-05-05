@@ -18,6 +18,7 @@ public class Main extends Application {
 	public static final String WINDOW_TITLE = "Knit and Crochet Pattern Storage Application";
 	public static final String GUI_RESOURCE = "view/codebehind/MainWindow.fxml";
 	public static final String ADD_PATTERN_RESOURCE = "view/codebehind/AddPatternWindow.fxml";
+	public static final String UPDATE_PATTERN_RESOURCE = "view/codebehind/UpdatePatternWindow.fxml";
 
 	/**
 	 * JavaFX entry point.

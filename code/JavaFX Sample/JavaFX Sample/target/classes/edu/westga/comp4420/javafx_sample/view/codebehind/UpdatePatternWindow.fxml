@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="guiPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.comp4420.javafx_sample.view.codebehind.UpdatePatternWindow">
+   <children>
+      <Label layoutX="26.0" layoutY="79.0" text="Pattern Name:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="151.0" text="Author:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="567.0" layoutY="79.0" text="Progress Made" underline="true">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="226.0" text="Website:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="301.0" text="Yarn Weight:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="425.0" layoutY="79.0" text="Craft" underline="true">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="patternNameTB" layoutX="189.0" layoutY="83.0" />
+      <TextField fx:id="authorTB" layoutX="189.0" layoutY="171.0" />
+      <TextField fx:id="websiteTB" layoutX="189.0" layoutY="246.0" />
+      <ComboBox fx:id="yarnWeightCB" layoutX="189.0" layoutY="321.0" prefWidth="150.0" />
+      <RadioButton fx:id="knitRadioBTN" layoutX="408.0" layoutY="138.0" mnemonicParsing="false" onAction="#onKnitRB" text="Knit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="crochetRadioBTN" layoutX="408.0" layoutY="196.0" mnemonicParsing="false" onAction="#onCrochetRB" text="Crochet">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="inProgressRadioBTN" layoutX="568.0" layoutY="196.0" mnemonicParsing="false" onAction="#onInProgressRB" text="In Progress">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="inCompleteRadioBTN" layoutX="568.0" layoutY="258.0" mnemonicParsing="false" onAction="#onInCompleteRB" text="Incomplete">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="completeRadioBTN" layoutX="567.0" layoutY="138.0" mnemonicParsing="false" onAction="#onCompleteRB" text="Complete">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="213.0" layoutY="381.0" mnemonicParsing="false" onAction="#onUpdateBTN" prefHeight="71.0" prefWidth="125.0" text="Update">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="410.0" layoutY="381.0" mnemonicParsing="false" onAction="#onCloseBTN" prefHeight="71.0" prefWidth="125.0" text="Close">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,4 +1,4 @@
-package main.java.edu.westga.comp4420.javafx_sample.model;
+package edu.westga.comp4420.javafx_sample.model;
 
 /**
  * The model class for knit and crochet Pattern
@@ -8,26 +8,20 @@ package main.java.edu.westga.comp4420.javafx_sample.model;
  */
 
 public class Pattern {
-    private static final String YARN_WEIGHT_BOUNDARIES = "Yarn weight must be in 1, 2, 3, or 4";
+    private static final String YARN_WEIGHT_BOUNDARIES = "Yarn weight must be in 1 to 4";
     private static final String WEBSITE_EMPTY = "Website can not be empty";
     private static final String WEBSITE_NULL = "Website can not be null";
     private static final String AUTHOR_EMPTY = "Author can not be empty";
     private static final String AUTHOR_NULL = "Author can not be null";
     private static final String PATTERN_EMPTY = "Pattern can not be empty";
     private static final String PATTERN_NULL = "Pattern can not be null";
+    private static final String NEW_LINE = "\n";
     private String patternName;
     private String author;
     private String website;
     private Craft craft;
     private Progression progression;
     private int yarnWeight;
-    // private static final String PATTERNNAME_NULL = "Pattern name can not be null";
-    // private static final String PATTERNNAME_EMPTY = "Pattern name can not be empty";
-    // private static final String AUTHOR_NULL = "Author can not be null";
-    // private static final String AUTHOR_EMPTY = "Author can not be empty";
-    // private static final String WEBSITE_NULL = "Website can not be null";
-    // private static final String WEBSITE_EMPTY = "Website can not be empty";
-    // private static final String YARNWEIGHT_BOUNDARY = "Yarn weight can't be under 1 or over 4";
 
     /**
      * The contructor for the class Pattern
@@ -35,7 +29,7 @@ public class Pattern {
      * @precondition patternName != null && !patternName.isEmpty()
      *               && author != null && !author.isEmpty()
      *               && website != null && !website.isEmpty()
-     *               && yarnWeight >= 1 && yarnWeight <= 4
+     *               && yarnWeight >= 1 && yarnWeight <= 6
      * @postcondition getPatternName == patternName && getAuthor == author && getWebsite == website && getCraft = craft
      *                && getProgression == progression && getYarnWeight == YarnWeight
      * @param patternName the pattern's name
@@ -65,7 +59,7 @@ public class Pattern {
         if (website.isEmpty()) {
             throw new IllegalArgumentException(WEBSITE_EMPTY);
         }
-        if (yarnWeight <= 0 || yarnWeight >= 5) {
+        if (yarnWeight <= 0 || yarnWeight >= 7) {
             throw new IllegalArgumentException(YARN_WEIGHT_BOUNDARIES);
         }
 
@@ -227,6 +221,18 @@ public class Pattern {
         }
 
         this.yarnWeight = yarnWeight;
+    }
+
+    /**
+     * Gives the pattern's basic information
+     * 
+     * @return the patterns information
+     */
+    public String patternInfo() {
+        String websiteInfo = "The website for the pattern can be found on " + this.website + NEW_LINE;
+        String craftInfo = "The fiber craft the pattern uses is " + this.craft + NEW_LINE;
+        String yarnWeightInfo = "The weight of yarn used for the pattern is " + this.yarnWeight + NEW_LINE;
+        return websiteInfo + craftInfo + yarnWeightInfo;
     }
 
     @Override

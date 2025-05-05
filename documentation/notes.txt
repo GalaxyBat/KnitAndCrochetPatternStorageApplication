@@ -1,0 +1,5 @@
+I was able to create the models for the application along with it's tests, but when i tried to run the tests, it was saying that I couldn't because I had import static org.junit.jupiter.api.Assertions.*;
+
+The project could be on an old version of java and that's why it's acting like that, but I can't be for sure. I sent a couple of emails on 3/5/2025 asking about it. Might need to scrap and rebuild the project from scratch code wise.
+
+Now it's not running because of this Exception was thrown while processing C:\Users\genes\OneDrive\Desktop\GenesisRoss_Lab3_COMP4420\KnitAndCrochetPatternStorageApplication\code\JavaFX Sample\JavaFX Sample\src\main\java\edu\westga\comp4420\javafx_sample\test\TestPatternStorageAdd.java: IllegalStateException occurred while parsing file C:\Users\genes\OneDrive\Desktop\GenesisRoss_Lab3_COMP4420\KnitAndCrochetPatternStorageApplication\code\JavaFX Sample\JavaFX Sample\src\main\java\edu\westga\comp4420\javafx_sample\test\TestPatternStorageAdd.java. 67:19: mismatched input '(' expecting ';': InputMismatchException when the line they're talking about is storage.add(pattern);

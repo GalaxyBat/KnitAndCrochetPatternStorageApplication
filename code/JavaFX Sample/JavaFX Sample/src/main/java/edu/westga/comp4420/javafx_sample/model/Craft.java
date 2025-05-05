@@ -1,4 +1,4 @@
-package main.java.edu.westga.comp4420.javafx_sample.model;
+package edu.westga.comp4420.javafx_sample.model;
 
 /**
  * The Enum Craft
@@ -8,5 +8,5 @@ package main.java.edu.westga.comp4420.javafx_sample.model;
  */
 
 public enum Craft {
-    Knit, Crochet;
+    Unknown, Knit, Crochet;
 }
