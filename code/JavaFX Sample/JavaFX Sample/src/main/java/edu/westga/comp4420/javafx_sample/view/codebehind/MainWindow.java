@@ -34,7 +34,10 @@ public class MainWindow {
 
     @FXML
     void deletePatternBTN(ActionEvent event) {
-
+        Pattern selectedPattern = this.patternListView.getSelectionModel().getSelectedItem();
+        if (selectedPattern != null) {
+            this.patternListView.getItems().remove(selectedPattern);
+        }
     }
 
 	@FXML
@@ -79,6 +82,20 @@ public class MainWindow {
 
 	@FXML
     void showPatternInfoBTN(ActionEvent event) {
+        try {
+            Pattern selectedPattern = this.patternListView.getSelectionModel().getSelectedItem();
+            if (selectedPattern != null) {
+                Alert infoBox = new Alert(AlertType.INFORMATION);
+                infoBox.setContentText(selectedPattern.patternInfo());
+                infoBox.showAndWait();
+            }
+
+
+        } catch (IllegalArgumentException error) {
+            Alert errorBox = new Alert(AlertType.ERROR);
+			errorBox.setContentText("Unable to open add window" + "\n" + error.getMessage());
+			errorBox.showAndWait();
+        }
 
     }
 

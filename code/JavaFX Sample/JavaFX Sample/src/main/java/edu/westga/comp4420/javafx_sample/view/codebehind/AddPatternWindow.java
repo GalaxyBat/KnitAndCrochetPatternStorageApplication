@@ -1,15 +1,19 @@
 package edu.westga.comp4420.javafx_sample.view.codebehind;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
-//import javafx.scene.control.Button;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import java.util.List;
 
+import edu.westga.comp4420.javafx_sample.model.Craft;
 import edu.westga.comp4420.javafx_sample.model.Pattern;
+import edu.westga.comp4420.javafx_sample.model.Progression;
 
 /**
  * CodeBehind To Handle Processing for the AddPatternWindow
@@ -50,22 +54,66 @@ public class AddPatternWindow {
     @FXML
     private ComboBox<Integer> yarnWeightCB;
 
-    //private List<Pattern> patterns;
+    private List<Pattern> patterns;
+
+    private void closeWindow() {
+		this.guiPane.getScene().getWindow().hide();
+	}
+
+    private Craft craft() {
+        Craft selectedCraft = Craft.Unknown;
+        if (this.knitRadioBTN.isSelected()) {
+            selectedCraft = Craft.Knit;
+        } else if (this.crochetRadioBTN.isSelected()) {
+            selectedCraft = Craft.Crochet;
+        }
+        return selectedCraft;
+    }
+    
+    private Progression progression() {
+        Progression selectedProgression = Progression.Unknown;
+        if (this.inCompleteRadioBTN.isSelected()) {
+            selectedProgression = Progression.Incomplete;
+        } else if (this.inProgressRadioBTN.isSelected()) {
+            selectedProgression = Progression.InProgress;
+        } else if (this.completeRadioBTN.isSelected()) {
+            selectedProgression = Progression.Complete;
+        }
+        return selectedProgression;
+    }
+
+    
 
     @FXML
     void onAddPatternBTN(ActionEvent event) {
+        try {
+            String patternName = this.patternNameTB.getText();
+            String authorName = this.authorTB.getText();
+            String websiteName = this.websiteTB.getText();
+            Craft craft = this.craft();
+            Progression progression = this.progression();
+            int yarnWeight = this.yarnWeightCB.getSelectionModel().getSelectedItem();
+            Pattern pattern = new Pattern(patternName, authorName, websiteName, craft, progression, yarnWeight);
+            this.patterns.add(pattern);
+            this.closeWindow();
+
+        } catch (IllegalArgumentException error) {
+            Alert errorBox = new Alert(AlertType.ERROR);
+			errorBox.setContentText(error.getMessage());
+			errorBox.showAndWait();
+        }
 
     }
 
     @FXML
     void onCloseWindowBTN(ActionEvent event) {
-
+        this.closeWindow();
     }
 
 
     @FXML
     void onCompleteRB(ActionEvent event) {
-
+        
     }
 
     @FXML
@@ -89,11 +137,12 @@ public class AddPatternWindow {
     }
 
     public void setItemList(List<Pattern> patterns) {
-        //this.patterns = patterns;
+        this.patterns = patterns;
     }
 
     @FXML
     void initialize() {
+        this.yarnWeightCB.setItems(FXCollections.observableArrayList(1, 2, 3, 4, 5, 6));
         assert this.authorTB != null : "fx:id=\"authorTB\" was not injected: check your FXML file 'AddPatternWindow.fxml'.";
         assert this.guiPane != null : "fx:id=\"guiPane\" was not injected: check your FXML file 'AddPatternWindow.fxml'.";
         assert this.patternNameTB != null : "fx:id=\"patternNameTB\" was not injected: check your FXML file 'AddPatternWindow.fxml'.";

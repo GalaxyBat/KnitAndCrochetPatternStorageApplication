@@ -15,6 +15,7 @@ public class Pattern {
     private static final String AUTHOR_NULL = "Author can not be null";
     private static final String PATTERN_EMPTY = "Pattern can not be empty";
     private static final String PATTERN_NULL = "Pattern can not be null";
+    private static final String NEW_LINE = "\n";
     private String patternName;
     private String author;
     private String website;
@@ -220,6 +221,18 @@ public class Pattern {
         }
 
         this.yarnWeight = yarnWeight;
+    }
+
+    /**
+     * Gives the pattern's basic information
+     * 
+     * @return the patterns information
+     */
+    public String patternInfo() {
+        String websiteInfo = "The website for the pattern can be found on " + this.website + NEW_LINE;
+        String craftInfo = "The fiber craft the pattern uses is " + this.craft + NEW_LINE;
+        String yarnWeightInfo = "The weight of yarn used for the pattern is " + this.yarnWeight + NEW_LINE;
+        return websiteInfo + craftInfo + yarnWeightInfo;
     }
 
     @Override

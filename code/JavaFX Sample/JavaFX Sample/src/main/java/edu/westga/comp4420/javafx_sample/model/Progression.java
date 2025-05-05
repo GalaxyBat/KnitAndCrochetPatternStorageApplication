@@ -8,5 +8,5 @@ package edu.westga.comp4420.javafx_sample.model;
  */
 
 public enum Progression {
-    Incomplete, InProgress, Complete;
+    Unknown, Incomplete, InProgress, Complete;
 }
