@@ -35,27 +35,27 @@
          </font>
       </Label>
       <ComboBox fx:id="yarnWeightCB" layoutX="192.0" layoutY="232.0" prefWidth="150.0" />
-      <RadioButton fx:id="knitRadioBTN" layoutX="409.0" layoutY="99.0" mnemonicParsing="false" text="Knit">
+      <RadioButton fx:id="knitRadioBTN" layoutX="409.0" layoutY="99.0" mnemonicParsing="false" onAction="#onKnitRB" text="Knit">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="crochetRadioBTN" layoutX="409.0" layoutY="171.0" mnemonicParsing="false" text="Crochet">
+      <RadioButton fx:id="crochetRadioBTN" layoutX="409.0" layoutY="171.0" mnemonicParsing="false" onAction="#onCrochetRB" text="Crochet">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="completeRadioBTN" layoutX="593.0" layoutY="99.0" mnemonicParsing="false" text="Complete">
+      <RadioButton fx:id="completeRadioBTN" layoutX="593.0" layoutY="99.0" mnemonicParsing="false" onAction="#onCompleteRB" text="Complete">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="inProgressRadioBTN" layoutX="588.0" layoutY="171.0" mnemonicParsing="false" text="In Progress">
+      <RadioButton fx:id="inProgressRadioBTN" layoutX="588.0" layoutY="171.0" mnemonicParsing="false" onAction="#onInProgressRB" text="In Progress">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="inCompleteRadioBTN" layoutX="588.0" layoutY="231.0" mnemonicParsing="false" text="Incomplete">
+      <RadioButton fx:id="inCompleteRadioBTN" layoutX="588.0" layoutY="231.0" mnemonicParsing="false" onAction="#onInCompleteRB" text="Incomplete">
          <font>
             <Font size="18.0" />
          </font>

@@ -113,26 +113,33 @@ public class AddPatternWindow {
 
     @FXML
     void onCompleteRB(ActionEvent event) {
+        this.inCompleteRadioBTN.setSelected(false);
+        this.inProgressRadioBTN.setSelected(false);
         
     }
 
     @FXML
     void onCrochetRB(ActionEvent event) {
-
+        this.knitRadioBTN.setSelected(false);
     }
 
     @FXML
     void onInCompleteRB(ActionEvent event) {
+        this.completeRadioBTN.setSelected(false);
+        this.inProgressRadioBTN.setSelected(false);
 
     }
 
     @FXML
     void onInProgressRB(ActionEvent event) {
+        this.completeRadioBTN.setSelected(false);
+        this.inCompleteRadioBTN.setSelected(false);
 
     }
 
     @FXML
     void onKnitRB(ActionEvent event) {
+        this.crochetRadioBTN.setSelected(false);
 
     }
 
