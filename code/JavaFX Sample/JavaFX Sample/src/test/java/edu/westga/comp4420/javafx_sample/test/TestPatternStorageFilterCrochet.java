@@ -16,34 +16,35 @@ import edu.westga.comp4420.javafx_sample.model.Progression;
  * @version Spring 2025
  * @author Genesis Ross
  */
-class TestPatternStorageFilterKnit {
+
+class TestPatternStorageFilterCrochet {
     @Test
     void testWhenThereIsNoPatternsInStorage() {
         PatternStorage storage = new PatternStorage();
-        assertTrue(storage.onlyKnitPatterns().isEmpty());
+        assertTrue(storage.onlyCrochetPatterns().isEmpty());
     }
 
     @Test 
-    void testWhenThereIsNoKnitPatternsInStorage() {
-        PatternStorage storage = new PatternStorage();
-        Craft craft = Craft.Crochet;
-        Progression progression = Progression.Complete;
-        Pattern pattern = new Pattern("Pull Over Raglan", "Becky Appleburg", "Raverly.com", craft, progression, 4);
-        storage.add(pattern);
-        assertTrue(storage.onlyKnitPatterns().isEmpty());
-    }
-
-    @Test
-    void testWhenThereIsOneKnitPatternInStorage() {
+    void testWhenThereIsNoCrochetPatternsInStorage() {
         PatternStorage storage = new PatternStorage();
         Craft craft = Craft.Knit;
         Progression progression = Progression.Complete;
         Pattern pattern = new Pattern("Pull Over Raglan", "Becky Appleburg", "Raverly.com", craft, progression, 4);
         storage.add(pattern);
-        ArrayList<Pattern> knitPatterns = storage.onlyKnitPatterns();
+        assertTrue(storage.onlyCrochetPatterns().isEmpty());
+    }
+
+    @Test
+    void testWhenThereIsOneCrochetPatternInStorage() {
+        PatternStorage storage = new PatternStorage();
+        Craft craft = Craft.Crochet;
+        Progression progression = Progression.Complete;
+        Pattern pattern = new Pattern("Pull Over Raglan", "Becky Appleburg", "Raverly.com", craft, progression, 4);
+        storage.add(pattern);
+        ArrayList<Pattern> crochetPatterns = storage.onlyCrochetPatterns();
         assertAll(
-            () -> assertEquals(1, knitPatterns.size()),
-            () -> assertSame(pattern, knitPatterns.get(0))
+            () -> assertEquals(1, crochetPatterns.size()),
+            () -> assertSame(pattern, crochetPatterns.get(0))
         );
     }
 
@@ -60,10 +61,10 @@ class TestPatternStorageFilterKnit {
         storage.add(pattern);
         storage.add(pattern2);
 
-        ArrayList<Pattern> knitPatterns = storage.onlyKnitPatterns();
+        ArrayList<Pattern> crochetPatterns = storage.onlyCrochetPatterns();
         assertAll(
-            () -> assertEquals(1, knitPatterns.size()),
-            () -> assertSame(pattern2, knitPatterns.get(0))
+            () -> assertEquals(1, crochetPatterns.size()),
+            () -> assertSame(pattern, crochetPatterns.get(0))
         );
 
     }
@@ -79,18 +80,18 @@ class TestPatternStorageFilterKnit {
         Progression progression2 = Progression.InProgress;
 
         Pattern pattern = new Pattern("Pull Over Raglan", "Becky Appleburg", "Raverly.com", craft, progression, 4);
-        Pattern pattern2 = new Pattern("Cardigan", "Tiffany Appleburg", "Raverly.com", craft2, progression, 3);
+        Pattern pattern2 = new Pattern("Cardigan", "Tiffany Appleburg", "Raverly.com", craft, progression, 3);
         Pattern pattern3 = new Pattern("Circle yoke sweater", "Ashley Tipton", "Raverly.com", craft2, progression2, 2);
         
         storage.add(pattern);
         storage.add(pattern2);
         storage.add(pattern3);
-
-        ArrayList<Pattern> knitPatterns = storage.onlyKnitPatterns();
+        
+        ArrayList<Pattern> crochetPatterns = storage.onlyCrochetPatterns();
         assertAll(
-            () -> assertEquals(2, knitPatterns.size()),
-            () -> assertSame(pattern2, knitPatterns.get(0)),
-            () -> assertSame(pattern3, knitPatterns.get(1))
+            () -> assertEquals(2, crochetPatterns.size()),
+            () -> assertSame(pattern, crochetPatterns.get(0)),
+            () -> assertSame(pattern2, crochetPatterns.get(1))
         );
     }
 }
